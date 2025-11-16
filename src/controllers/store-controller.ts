@@ -132,7 +132,7 @@ export class StoreController {
 
       return res
         .status(200)
-        .json({ message: `A loja ${storeExistsObj.name} foi desativada` });
+        .json({ message: `A loja ${storeExistsObj.name} foi ${newStatus ? "ativado" : "desativado"}` });
     } catch (error) {
       return next(error);
     }
